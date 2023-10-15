@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import Contact from "@/app/components/Contact";
+import { companyMock } from "@/app/data/companyMock";
 
 export default function ContactPage() {
   const contactStructure = {
@@ -26,21 +27,21 @@ export default function ContactPage() {
   useEffect(() => {
     if (company && contact) {
       // Find the company object that matches the 'company' parameter
-      const matchedCompany = companyData.find((data) => data.id === company);
-
+      const matchedCompany = companyMock.find((data) => data.id === company);
+      console.log(matchedCompany);
       if (matchedCompany) {
         // Find the contact information within the matched company
         const matchedContact = matchedCompany.contacts.find(
           (c) => c.id === contact
         );
-
+        console.log(matchedContact);
         if (matchedContact) {
           setContactData(matchedContact);
         } else {
-          router.push("/"); // Redirect to the homepage if no match is found for 'contact'
+          // router.push("/"); // Redirect to the homepage if no match is found for 'contact'
         }
       } else {
-        router.push("/"); // Redirect to the homepage if no match is found for 'company'
+        // router.push("/"); // Redirect to the homepage if no match is found for 'company'
       }
     }
   }, [company, contact, router]);
@@ -49,7 +50,7 @@ export default function ContactPage() {
     return <div>Loading...</div>;
   }
   return (
-    <main className="flex items-center justify-center p-24">
+    <main className="flex items-center justify-center">
       <Contact
         altlogo={contactData.altlogo}
         altImg={contactData.altImg}
