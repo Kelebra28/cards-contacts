@@ -5,4 +5,4 @@ export const  COLORS_SOCIAL = {
     ln: '#0077B5',
 }
 
-export const ICONS_STYLE = 'm-1 text-5xl'
+export const ICONS_STYLE = 'm-1 w-16 h-16'
