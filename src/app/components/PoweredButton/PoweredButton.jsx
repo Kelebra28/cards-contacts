@@ -5,12 +5,12 @@ import "./PoweredButton.css";
 
 const PoweredButton = ({ negative }) => {
   return (
-    <div className="flex items-center justify-center">
+    <a href='https://www.rpmspeedcode.com' target="_blank" className="flex items-center justify-center">
       <div className="b relative mx-auto h-16 w-64 flex justify-center items-center">
         <div className="i h-16 w-64  items-center rounded-xl shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-        <a href='https://www.rpmspeedcode.com' target="_blank" className={`text-center ${negative? 'text-white': 'text-black'} z-10 pointer-events-none`}>
+        <div className={`text-center ${negative? 'text-white': 'text-black'} z-10 pointer-events-none`}>
           Powered By {' '}
-        </a>
+        </div>
           <div className="flex flex-col justify-center items-center text-white">
           <Image
             src={ negative ? `/rpm/rpm_deg_white.svg`  : '/rpm/rpm_deg_black.svg' }
@@ -25,7 +25,7 @@ const PoweredButton = ({ negative }) => {
           <span className="absolute inline-flex rounded-full h-3 w-3 bg-[#FB2B6D]"></span>
         </span>
       </div>
-    </div>
+    </a>
   );
 };
 
