@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import VCard from "vcard-creator";
 import Image from "next/image";
 import ButtonAnimation from "./ButtonAnimation/ButtonAnimation";
@@ -12,7 +12,11 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import PoweredButton from "./PoweredButton/PoweredButton";
 
+import "./Contact.css"
+
 const Contact = ({
+  imgLogo,
+  contactImg,
   altlogo,
   altImg,
   company,
@@ -25,6 +29,13 @@ const Contact = ({
   title,
   waMessage,
   webpage,
+  icons,
+  companyBgColor,
+  companyTextColor,
+  primaryColor,
+  secundaryColor,
+  miniLogo,
+  negative,
 }) => {
   const emailSubject = "Cotizacion desarollo";
 
@@ -34,7 +45,14 @@ const Contact = ({
   const emailCompany = `mailto:${emailC}?subject=${encodeURIComponent(
     emailSubject
   )}`;
+
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=${waMessage}`;
+
+  // Style Company
+  const companyStyles = {
+    "--companyBg": companyBgColor,
+    "--companyTextColor": companyTextColor,
+  }
 
   const downloadContact = () => {
     const vCard = new VCard();
@@ -61,21 +79,28 @@ const Contact = ({
     document.body.removeChild(a);
   };
 
+  const bgIcon = useMemo(() => {
+    if (negative) {
+      true
+    }
+    return false
+  }, [negative])
+
   return (
-    <div className="bg-gray-900 border-2 w-full min-h-screen mx-auto  font-sans text-xl pb-10">
+    <div className={`w-full min-h-screen mx-auto  font-sans text-xl pb-10 bg`} style={companyStyles}>
       <main className="mt-8">
         <div className="flex flex-col justify-center items-center mt-8 text-white">
           <Image
-            src="/rpm/rpm_white.svg"
+            src={imgLogo}
             alt={altlogo}
-            className="mb-4"
-            width={150}
+            // className="mb-4"
+            width={300}
             height={50}
           />
 
           <div className="mt-12 mb-12 w-48 h-48 border-6 border-teal-900 rounded-full">
             <Image
-              src="/rpm/eiichi.jpeg"
+              src={contactImg}
               alt={altImg}
               className="w-full h-full rounded-full"
               width={200}
@@ -83,64 +108,84 @@ const Contact = ({
             />
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center text-white">
+        <div className="flex flex-col justify-center items-center customText" style={companyStyles}>
           <div className="flex items-center justify-center w-full mb-8">
-            <Image
-              src="/rpm/x_blanco.svg"
-              alt="rpm code"
-              className="mr-4"
-              width={100}
-              height={50}
-            />
-            <h2 className="text-3xl font-semibold border-b-2 ">{title}</h2>
+            {miniLogo && (
+              <Image
+                src={miniLogo}
+                alt={altlogo}
+                className="mr-4"
+                width={50}
+                height={50}
+              />
+            )}
+            <div>
+              <h2 className="text-3xl font-semibold border-b-2 ">
+                 {title}
+              </h2>
+              <p>{jobTittle}</p>
+            </div>
           </div>
-          <div className="flex flex-col justify-center items-center text-white">
+          <div className="flex flex-col justify-center items-center customText" style={companyStyles}>
             <div className="flex items-center my-4">
               <ButtonAnimation
-                backgroundColor="#FB2B6D"
-                icon={<PhoneIphoneIcon className="text-white text-3xl mr-2" />}
+                negative={negative}
+                textColor={companyTextColor}
+                backgroundColor={primaryColor}
+                icon={<PhoneIphoneIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
                 label={phone}
                 link={`tel:+52${phone}`}
               />
             </div>
             <div className="flex items-center my-4">
               <ButtonAnimation
-                backgroundColor="#90FAD6"
-                icon={<WhatsAppIcon className="text-white text-3xl mr-2" />}
+                negative={negative}
+                textColor={companyTextColor}
+                backgroundColor={secundaryColor}
+                icon={<WhatsAppIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
                 label={`WhatsApp`}
                 link={urlWhatsApp}
               />
             </div>
             <div className="flex items-center my-4">
               <ButtonAnimation
-                backgroundColor="#FB2B6D"
-                icon={<EmailIcon className="text-white text-3xl mr-2" />}
+                negative={negative}
+                textColor={companyTextColor}
+                backgroundColor={primaryColor}
+                icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
                 label={email}
                 link={emailPersonal}
+                expand
               />
             </div>
             <div className="flex items-center my-4">
               <ButtonAnimation
-                backgroundColor="#FB2B6D"
-                icon={<EmailIcon className="text-white text-3xl mr-2" />}
+                negative={negative}
+                textColor={companyTextColor}
+                backgroundColor={secundaryColor}
+                icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
                 label={emailC}
                 link={emailCompany}
+                expand
               />
             </div>
             <div className="flex items-center my-4">
               <ButtonAnimation
-                backgroundColor="#90FAD6"
-                icon={<LanguageIcon className="text-white text-3xl mr-2" />}
+                negative={negative}
+                textColor={companyTextColor}
+                backgroundColor={primaryColor}
+                icon={<LanguageIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
                 label={webpage}
                 link={`https://${webpage}/`}
+                expand
               />
             </div>
 
             <div className="flex items-center my-4">
-              <SocialButtons />
+              <SocialButtons icons={icons} />
             </div>
             <div className="flex items-center my-4">
-              <PoweredButton />
+              <PoweredButton negative={negative} />
             </div>
             <div className="flex items-center mb-4">
               <GitHubIcon className="ml-4 text-lg" />

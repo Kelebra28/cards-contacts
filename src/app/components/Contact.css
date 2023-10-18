@@ -1,0 +1,6 @@
+.bg {
+    background: var(--companyBg) !important;
+}
+.customText {
+    color: var(--companyTextColor) !important;
+}

@@ -6,32 +6,28 @@ import CodeIcon from "@mui/icons-material/Code";
 
 import "./SocialButtons.css";
 
-const SocialButtons = () => {
+const SocialButtons = ({ backColor, icons }) => {
+  const colorStyles= {
+    '--iconBg' : backColor
+  }
+  if(!icons) {
+    return null;
+  }
   return (
     <>
-      <ul className="social-buttons">
-        <li>
-          <a href="#">
-            <div className="icon-background instagram">
-              <InstagramIcon fontSize="large" />
+    <ul className="social-buttons">
+    {icons.map((icon) => {
+      return(
+        <li style={colorStyles}  key={icon.id}>
+          <a className="fa-brands" target="_blank" href={icon.link}>
+            <div className="icon-background fa-brands">
+              {icon.icon}
             </div>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <div className="icon-background whatsapp">
-              <PersonIcon fontSize="large" />
-            </div>
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <div className="icon-background twitter">
-              <TwitterIcon fontSize="large" />
-            </div>
-          </a>
-        </li>
-      </ul>
+      )
+    })}
+    </ul>
     </>
   );
 };
