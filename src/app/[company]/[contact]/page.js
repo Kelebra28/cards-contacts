@@ -50,10 +50,10 @@ export default function ContactPage() {
         if (matchedContact) {
           setContactData(matchedContact);
         } else {
-          // router.push("/"); // Redirect to the homepage if no match is found for 'contact'
+          router.push("/"); // Redirect to the homepage if no match is found for 'contact'
         }
       } else {
-        // router.push("/"); // Redirect to the homepage if no match is found for 'company'
+        router.push("/"); // Redirect to the homepage if no match is found for 'company'
       }
     }
   }, [company, contact, router]);
