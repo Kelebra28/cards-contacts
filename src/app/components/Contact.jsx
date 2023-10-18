@@ -17,6 +17,7 @@ import "./Contact.css";
 import { URL_SITE } from "../utils/contants";
 
 import "./Contact.css";
+import { formatPhoneNumber } from "../hooks/formatters";
 
 const Contact = ({
   addressMap,
@@ -55,7 +56,7 @@ const Contact = ({
   )}`;
 
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=Hola!}`;
-
+  const phoneFormat = formatPhoneNumber(phone);
   // Style Company
   const companyStyles = {
     "--companyBg": companyBgColor,
@@ -188,7 +189,7 @@ const Contact = ({
                     } text-3xl mr-2`}
                   />
                 }
-                label={phone}
+                label={phoneFormat}
                 link={`tel:+52${phone}`}
               />
             </div>

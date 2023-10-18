@@ -153,4 +153,45 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "imce",
+    companyId: "imce",
+    imgLogo: "/imce/IMCE-logo.png",
+    miniLogo: "/imce/IMXE-minilogo.png",
+    altlogo: "Logo IMCE",
+    company: "IMCE",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#FDD205",
+    secundaryColor: "#ffa424",
+    negative: false,
+    companyAddress:
+      "Direccion: 5 de febrero #99, Col. El Morro, Boca del Río Veracruz, Mexico",
+    contacts: [
+      {
+        id: "cinthya-garcia",
+        email: "cinthya.garciaso@gmail.com",
+        emailC:"imce.capacitacionempresarial@gmail.com",
+        jobTittle: "Directora",
+        lastname: "García Sotelo",
+        name: "Cinthya Cecilia",
+        phone: "5530200111",
+        title: "Cinthya García",
+        contactImg: "/imce/cinthya-garcia-imce.jpeg",
+        altImg: "Cinthya García",
+        icons: [
+          {
+            icon: (
+              <FacebookIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.fb }}
+              />
+            ),
+            link: "https://www.facebook.com/profile.php?id=100092268767375&mibextid=ZbWKwL",
+            id: "fb",
+          },
+        ],
+      },
+    ],
+  },
 ];
