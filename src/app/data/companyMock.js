@@ -14,7 +14,7 @@ export const companyMock = [
     {
       id: "rpm",
       companyId: "rpm",
-      imgLogo: "/rpm/rpm_white.svg",
+      imgLogo: "/rpm/rpm_deg_white.png",
       miniLogo: "/rpm/x_blanco.svg",
       altlogo: "Logo 1",
       company: "company1",
