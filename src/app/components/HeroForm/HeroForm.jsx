@@ -68,10 +68,10 @@ export default function HeroForm() {
         <button
           onClick={handleSubmit}
           type="submit"
-          class="b mx-auto h-16 w-50 flex justify-center items-center"
+          className="b mx-auto h-16 w-50 flex justify-center items-center"
         >
-          <div class="i h-16 w-64 bg-gradient-to-br from-teal-400 to-teal-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
-          <span class="text-center text-white font-semibold z-10 pointer-events-none">
+          <div className="i h-16 w-64 bg-gradient-to-br from-teal-400 to-teal-600 items-center rounded-full shadow-2xl cursor-pointer absolute overflow-hidden transform hover:scale-x-110 hover:scale-y-105 transition duration-300 ease-out"></div>
+          <span className="text-center text-white font-semibold z-10 pointer-events-none">
             Contactanos
           </span>
         </button>
