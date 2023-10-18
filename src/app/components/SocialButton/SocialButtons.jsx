@@ -6,9 +6,9 @@ import CodeIcon from "@mui/icons-material/Code";
 
 import "./SocialButtons.css";
 
-const SocialButtons = ({ backColor, icons }) => {
+const SocialButtons = ({ negative, icons }) => {
   const colorStyles= {
-    '--iconBg' : backColor
+    '--borderIcon' : negative ? '#000000' : '#ffffff' 
   }
   if(!icons) {
     return null;
@@ -18,7 +18,7 @@ const SocialButtons = ({ backColor, icons }) => {
     <ul className="social-buttons">
     {icons.map((icon) => {
       return(
-        <li style={colorStyles}  key={icon.id}>
+        <li  key={icon.id}>
           <a className="fa-brands" target="_blank" href={icon.link}>
             <div className="icon-background fa-brands">
               {icon.icon}

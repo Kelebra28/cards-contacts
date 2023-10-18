@@ -4,3 +4,9 @@
 .customText {
     color: var(--companyTextColor) !important;
 }
+
+/* .animationDowload :hover,.animationDowload ::after,.animationDowload ::before {
+    color: var(--primary);
+    border: 2px solid !important;
+    border-color:  var(--primary) !important;
+} */

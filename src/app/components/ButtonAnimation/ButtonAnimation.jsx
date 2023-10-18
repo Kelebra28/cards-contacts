@@ -10,7 +10,7 @@ const ButtonAnimation = ({ label, link, backgroundColor, icon, expand, textColor
   
    useEffect(() => {
 
-    if (label.length > 20 && expand) {
+    if (label && label.length > 20 && expand) {
       setWidthButton(!widthButton)
     }
 
