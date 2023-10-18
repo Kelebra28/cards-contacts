@@ -3,21 +3,23 @@ import VCard from "vcard-creator";
 import Image from "next/image";
 import ButtonAnimation from "./ButtonAnimation/ButtonAnimation";
 import SocialButtons from "./SocialButton/SocialButtons";
+import PoweredButton from "./PoweredButton/PoweredButton";
 import QRCodeGenerator from "./generatorQr/generatorQr";
 
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import LanguageIcon from "@mui/icons-material/Language";
-import GitHubIcon from "@mui/icons-material/GitHub";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import PoweredButton from "./PoweredButton/PoweredButton";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import "./Contact.css";
 
 import { URL_SITE } from "../utils/contants";
 
 import "./Contact.css"
 
 const Contact = ({
+  addressMap,
   imgLogo,
   contactImg,
   altlogo,
@@ -58,7 +60,7 @@ const Contact = ({
     "--companyBg": companyBgColor,
     "--companyTextColor": companyTextColor,
     "--primary": primaryColor,
-  }
+  };
 
   const downloadContact = () => {
     const vCard = new VCard();
@@ -85,16 +87,23 @@ const Contact = ({
     document.body.removeChild(a);
   };
 
+  let googleMapsURL = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    addressMap
+  )}`;
+
   const bgIcon = useMemo(() => {
     if (negative) {
-      true
+      true;
     }
-    return false
-  }, [negative])
+    return false;
+  }, [negative]);
 
   console.log(urlCompany, urlContact);
   return (
-    <div className={`w-full min-h-screen mx-auto  font-sans text-xl pb-10 bg`} style={companyStyles}>
+    <div
+      className={`w-full min-h-screen mx-auto  font-sans text-xl pb-10 bg`}
+      style={companyStyles}
+    >
       <main className="mt-8">
         <div className="flex flex-col justify-center items-center mt-8 text-white">
           <Image
@@ -102,10 +111,14 @@ const Contact = ({
             alt={altlogo}
             width={300}
             height={50}
-            style={{ marginBottom: '4rem' }}
+            style={{ marginBottom: "4rem" }}
           />
-          {contactImg ?
-            <div className={`mt-2 mb-12 w-48 h-48 border-solid border-4 border-[${negative ? '#000000' : '#ffffff'}] rounded-full`}>
+          {contactImg ? (
+            <div
+              className={`mt-2 mb-12 w-48 h-48 border-solid border-4 border-[${
+                negative ? "#000000" : "#ffffff"
+              }] rounded-full`}
+            >
               <Image
                 src={contactImg}
                 alt={altImg}
@@ -113,10 +126,13 @@ const Contact = ({
                 width={200}
                 height={200}
               />
-            </div> : null
-          }
+            </div>
+          ) : null}
         </div>
-        <div className="flex flex-col justify-center items-center customText" style={companyStyles}>
+        <div
+          className="flex flex-col justify-center items-center customText"
+          style={companyStyles}
+        >
           <div className="flex items-center justify-center w-full mb-8">
             {miniLogo && (
               <Image
@@ -128,19 +144,26 @@ const Contact = ({
               />
             )}
             <div>
-              <h2 className="text-3xl font-semibold border-b-2 ">
-                {title}
-              </h2>
+              <h2 className="text-3xl font-semibold border-b-2 ">{title}</h2>
               <p>{jobTittle}</p>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center customText" style={companyStyles}>
+          <div
+            className="flex flex-col justify-center items-center customText"
+            style={companyStyles}
+          >
             <div className="flex items-center my-4">
               <ButtonAnimation
                 negative={negative}
                 textColor={companyTextColor}
                 backgroundColor={primaryColor}
-                icon={<PhoneIphoneIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                icon={
+                  <PhoneIphoneIcon
+                    className={`${
+                      negative ? "text-white" : "text-black"
+                    } text-3xl mr-2`}
+                  />
+                }
                 label={phone}
                 link={`tel:+52${phone}`}
               />
@@ -150,7 +173,13 @@ const Contact = ({
                 negative={negative}
                 textColor={companyTextColor}
                 backgroundColor={secundaryColor}
-                icon={<WhatsAppIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                icon={
+                  <WhatsAppIcon
+                    className={`${
+                      negative ? "text-white" : "text-black"
+                    } text-3xl mr-2`}
+                  />
+                }
                 label={`WhatsApp`}
                 link={urlWhatsApp}
               />
@@ -161,7 +190,13 @@ const Contact = ({
                   negative={negative}
                   textColor={companyTextColor}
                   backgroundColor={primaryColor}
-                  icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  icon={
+                    <EmailIcon
+                      className={`${
+                        negative ? "text-white" : "text-black"
+                      } text-3xl mr-2`}
+                    />
+                  }
                   label={email}
                   link={emailPersonal}
                   expand
@@ -174,7 +209,13 @@ const Contact = ({
                   negative={negative}
                   textColor={companyTextColor}
                   backgroundColor={secundaryColor}
-                  icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  icon={
+                    <EmailIcon
+                      className={`${
+                        negative ? "text-white" : "text-black"
+                      } text-3xl mr-2`}
+                    />
+                  }
                   label={emailC}
                   link={emailCompany}
                   expand
@@ -187,12 +228,37 @@ const Contact = ({
                   negative={negative}
                   textColor={companyTextColor}
                   backgroundColor={primaryColor}
-                  icon={<LanguageIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  icon={
+                    <LanguageIcon
+                      className={`${
+                        negative ? "text-white" : "text-black"
+                      } text-3xl mr-2`}
+                    />
+                  }
                   label={webpage}
                   link={`https://${webpage}/`}
                   expand
                 />
-            </div>
+              </div>
+            ) : null}
+            {addressMap ? (
+              <div className="flex items-center my-4">
+                <ButtonAnimation
+                  negative={negative}
+                  textColor={companyTextColor}
+                  backgroundColor={secundaryColor}
+                  icon={
+                    <LocationOnIcon
+                      className={`${
+                        negative ? "text-white" : "text-black"
+                      } text-3xl mr-2`}
+                    />
+                  }
+                  label={addressMap}
+                  link={`${googleMapsURL}`}
+                  expand
+                />
+              </div>
             ) : null}
 
             <div className="flex items-center my-4">
@@ -207,16 +273,6 @@ const Contact = ({
             <div className="flex items-center my-4">
               <PoweredButton negative={negative} />
             </div>
-            {/* <div className="flex items-center mb-4">
-              <GitHubIcon className="ml-4 text-lg" />
-              <a
-                href="https://github.com/EiichiM"
-                target="_blank"
-                className="ml-4 text-2xl"
-              >
-                Git Hub
-              </a>
-            </div> */}
           </div>
         </div>
       </main>

@@ -85,6 +85,7 @@ export default function ContactPage() {
         primaryColor={companyData.primaryColor}
         secundaryColor={companyData.secundaryColor}
         negative={companyData.negative}
+        addressMap={companyData.companyAddress}
         urlCompany={company}
         urlContact={contact}
       />
