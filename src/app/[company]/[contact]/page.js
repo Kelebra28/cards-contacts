@@ -35,8 +35,7 @@ export default function ContactPage() {
   const [contactData, setContactData] = useState(contactStructure);
   const [companyData, setCompanyData] = useState(companyStructure);
   const router = useRouter();
-  const { company } = useParams();
-  const { contact } = useParams();
+  const { company, contact } = useParams();
 
   useEffect(() => {
     if (company && contact) {
@@ -86,6 +85,8 @@ export default function ContactPage() {
         primaryColor={companyData.primaryColor}
         secundaryColor={companyData.secundaryColor}
         negative={companyData.negative}
+        urlCompany={company}
+        urlContact={contact}
       />
     </main>
   );
