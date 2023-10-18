@@ -16,33 +16,34 @@ import "./Contact.css";
 
 import { URL_SITE } from "../utils/contants";
 
-import "./Contact.css"
+import "./Contact.css";
 
 const Contact = ({
   addressMap,
-  imgLogo,
-  contactImg,
   altlogo,
   altImg,
+  contactImg,
+  companySlogan,
+  companyBgColor,
+  companyTextColor,
   company,
   email,
   emailC,
+  icons,
+  imgLogo,
   jobTittle,
   lastname,
+  miniLogo,
   name,
+  negative,
   phone,
-  title,
-  waMessage,
-  webpage,
-  icons,
-  companyBgColor,
-  companyTextColor,
   primaryColor,
   secundaryColor,
-  miniLogo,
-  negative,
+  title,
   urlCompany,
   urlContact,
+  waMessage,
+  webpage,
 }) => {
   const emailSubject = "Cotizacion desarollo";
 
@@ -105,14 +106,36 @@ const Contact = ({
       style={companyStyles}
     >
       <main className="mt-8">
-        <div className="flex flex-col justify-center items-center mt-8 text-white">
-          <Image
-            src={imgLogo}
-            alt={altlogo}
-            width={300}
-            height={50}
-            style={{ marginBottom: "4rem" }}
-          />
+        <div
+          className="flex flex-col justify-center items-center mt-8 customText"
+          style={companyStyles}
+        >
+          {companySlogan ? (
+            <>
+              <Image
+                src={imgLogo}
+                alt={altlogo}
+                width={300}
+                height={50}
+                style={{ marginBottom: "1rem" }}
+              />
+              <div className="flex items-center justify-center w-5/6 mb-8">
+                <p className="text-xl text-center font-semibold">
+                  {companySlogan}
+                </p>
+              </div>
+            </>
+          ) : (
+            <>
+              <Image
+                src={imgLogo}
+                alt={altlogo}
+                width={300}
+                height={50}
+                style={{ marginBottom: "4rem" }}
+              />
+            </>
+          )}
           {contactImg ? (
             <div
               className={`mt-2 mb-12 w-48 h-48 border-solid border-4 border-[${
@@ -129,6 +152,7 @@ const Contact = ({
             </div>
           ) : null}
         </div>
+
         <div
           className="flex flex-col justify-center items-center customText"
           style={companyStyles}
@@ -268,7 +292,7 @@ const Contact = ({
               <QRCodeGenerator
                 qrData={`${URL_SITE}/${urlCompany}/${urlContact}`}
                 qrNameFile={`${urlCompany}_${urlContact}`}
-               />
+              />
             </div>
             <div className="flex items-center my-4">
               <PoweredButton negative={negative} />
@@ -276,12 +300,21 @@ const Contact = ({
           </div>
         </div>
       </main>
-      <button
-        onClick={downloadContact}
-        className="fixed border-2 border-white rounded-full w-20 h-20 bottom-8 right-8 flex justify-center items-center z-50 animationDowload"
-      >
-        <PersonAddIcon className={`text-white text-3xl animationDowload`} />
-      </button>
+      {negative ? (
+        <button
+          onClick={downloadContact}
+          className={`bg-black fixed border-2 border-white rounded-full w-20 h-20 bottom-8 right-8 flex justify-center items-center z-50 animationDowload`}
+        >
+          <PersonAddIcon className={`text-white text-3xl animationDowload`} />
+        </button>
+      ) : (
+        <button
+          onClick={downloadContact}
+          className={`bg-white fixed border-2 border-black rounded-full w-20 h-20 bottom-8 right-8 flex justify-center items-center z-50 animationDowload`}
+        >
+          <PersonAddIcon className={`text-black text-3xl animationDowload`} />
+        </button>
+      )}
     </div>
   );
 };

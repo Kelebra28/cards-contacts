@@ -123,6 +123,7 @@ export const companyMock = [
     primaryColor: "#ff2424",
     secundaryColor: "#0303b5",
     negative: false,
+    companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
     companyAddress:
       "Av. Americas 140 Piso 14 Fracc. Las America, Boca Del Rio Veracruz, Mexico",
     contacts: [
@@ -136,7 +137,7 @@ export const companyMock = [
         title: "Jose Luis Duran Angel",
         webpage: "www.dccapitala.mx",
         contactImg: "/dccapital/ricardo_basurto.jpeg",
-        altImg: "Ricardo Basurto",
+        altImg: "Jose Luis Duran Angel",
         icons: [
           {
             icon: (
