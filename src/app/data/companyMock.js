@@ -7,21 +7,19 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { COLORS_SOCIAL, ICONS_STYLE } from "../utils/contants";
 
 export const companyMock = [
-  {
-    id: "rpm",
-    companyId: "rpm",
-    imgLogo: "/rpm/rpm_white.svg",
-    miniLogo: "/rpm/x_blanco.svg",
-    altlogo: "Logo 1",
-    company: "company1",
-    companyBgColor: "#000000",
-    companyTextColor: "#ffffff",
-    primaryColor: "#90FAD6",
-    secundaryColor: "#FB2B6D",
-    companyAddress: "Calle Mexico-Tacuba 94, CDMX, Mexico",
-    negative: true,
-    contacts: [
-      {
+    {
+      id: "rpm",
+      companyId: "rpm",
+      imgLogo: "/rpm/rpm_deg_white.png",
+      miniLogo: "/rpm/x_blanco.svg",
+      altlogo: "Logo 1",
+      company: "company1",
+      companyBgColor: "#000000",
+      companyTextColor: "#ffffff",
+      primaryColor: "#90FAD6",
+      secundaryColor: "#FB2B6D",
+      negative: true,
+      contacts:[ {
         id: "eiichi",
         email: "e.matsuo99@gmail.com",
         emailC: "info@rpmspeedcode.com",

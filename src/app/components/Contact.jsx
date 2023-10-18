@@ -4,6 +4,7 @@ import Image from "next/image";
 import ButtonAnimation from "./ButtonAnimation/ButtonAnimation";
 import SocialButtons from "./SocialButton/SocialButtons";
 import PoweredButton from "./PoweredButton/PoweredButton";
+import QRCodeGenerator from "./generatorQr/generatorQr";
 
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIphoneIcon from "@mui/icons-material/PhoneIphone";
@@ -12,6 +13,10 @@ import LanguageIcon from "@mui/icons-material/Language";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import "./Contact.css";
+
+import { URL_SITE } from "../utils/contants";
+
+import "./Contact.css"
 
 const Contact = ({
   addressMap,
@@ -36,6 +41,8 @@ const Contact = ({
   secundaryColor,
   miniLogo,
   negative,
+  urlCompany,
+  urlContact,
 }) => {
   const emailSubject = "Cotizacion desarollo";
 
@@ -91,6 +98,7 @@ const Contact = ({
     return false;
   }, [negative]);
 
+  console.log(urlCompany, urlContact);
   return (
     <div
       className={`w-full min-h-screen mx-auto  font-sans text-xl pb-10 bg`}
@@ -255,6 +263,12 @@ const Contact = ({
 
             <div className="flex items-center my-4">
               <SocialButtons icons={icons} negative={negative} />
+            </div>
+            <div className="flex items-center my-4">
+              <QRCodeGenerator
+                qrData={`${URL_SITE}/${urlCompany}/${urlContact}`}
+                qrNameFile={`${urlCompany}_${urlContact}`}
+               />
             </div>
             <div className="flex items-center my-4">
               <PoweredButton negative={negative} />

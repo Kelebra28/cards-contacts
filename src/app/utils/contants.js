@@ -1,3 +1,5 @@
+export const URL_SITE = 'https://card.rpmspeedcode.com'
+
 export const  COLORS_SOCIAL = {
     ig: '#c13584',
     fb: '#4267B2',
