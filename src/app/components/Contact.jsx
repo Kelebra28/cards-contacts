@@ -47,6 +47,7 @@ const Contact = ({
   )}`;
 
   const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=${waMessage}`;
+  // const urlWhatsApp = 'https://api.whatsapp.com/send?phone=+525512431147&text=Hola';
 
   // Style Company
   const companyStyles = {
