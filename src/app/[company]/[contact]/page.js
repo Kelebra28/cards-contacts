@@ -65,29 +65,30 @@ export default function ContactPage() {
   return (
     <main className="flex items-center justify-center">
       <Contact
+        addressMap={companyData.companyAddress}
         altlogo={contactData.altlogo}
         altImg={contactData.altImg}
-        imgLogo={companyData.imgLogo}
-        miniLogo={companyData.miniLogo}
-        contactImg={contactData.contactImg}
         company={contactData.company}
-        email={contactData.email}
-        emailC={contactData.emailC}
-        jobTittle={contactData.jobTittle}
-        lastname={contactData.lastname}
-        name={contactData.name}
-        phone={contactData.phone}
-        title={contactData.title}
-        webpage={contactData.webpage}
-        icons={contactData.icons}
+        contactImg={contactData.contactImg}
+        companySlogan={companyData.companySlogan}
         companyBgColor={companyData.companyBgColor}
         companyTextColor={companyData.companyTextColor}
+        email={contactData.email}
+        emailC={contactData.emailC}
+        imgLogo={companyData.imgLogo}
+        icons={contactData.icons}
+        jobTittle={contactData.jobTittle}
+        lastname={contactData.lastname}
+        miniLogo={companyData.miniLogo}
+        name={contactData.name}
+        negative={companyData.negative}
+        phone={contactData.phone}
+        title={contactData.title}
         primaryColor={companyData.primaryColor}
         secundaryColor={companyData.secundaryColor}
-        negative={companyData.negative}
-        addressMap={companyData.companyAddress}
         urlCompany={company}
         urlContact={contact}
+        webpage={contactData.webpage}
       />
     </main>
   );
