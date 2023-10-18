@@ -136,7 +136,7 @@ export const companyMock = [
         phone: "2292138397",
         title: "Jose Luis Duran Angel",
         webpage: "www.dccapitala.mx",
-        contactImg: "/dccapital/ricardo_basurto.jpeg",
+        contactImg: "/dccapital/JoseLuis-dccapital.jpeg",
         altImg: "Jose Luis Duran Angel",
         icons: [
           {
