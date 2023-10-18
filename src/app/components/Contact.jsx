@@ -46,13 +46,13 @@ const Contact = ({
     emailSubject
   )}`;
 
-  const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=${waMessage}`;
-  // const urlWhatsApp = 'https://api.whatsapp.com/send?phone=+525512431147&text=Hola';
+  const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=Hola!}`;
 
   // Style Company
   const companyStyles = {
     "--companyBg": companyBgColor,
     "--companyTextColor": companyTextColor,
+    "--primary": primaryColor,
   }
 
   const downloadContact = () => {
@@ -94,20 +94,21 @@ const Contact = ({
           <Image
             src={imgLogo}
             alt={altlogo}
-            // className="mb-4"
             width={300}
             height={50}
+            style={{ marginBottom: '4rem' }}
           />
-
-          <div className="mt-12 mb-12 w-48 h-48 border-6 border-teal-900 rounded-full">
-            <Image
-              src={contactImg}
-              alt={altImg}
-              className="w-full h-full rounded-full"
-              width={200}
-              height={200}
-            />
-          </div>
+          {contactImg ?
+            <div className={`mt-2 mb-12 w-48 h-48 border-solid border-4 border-[${negative ? '#000000' : '#ffffff'}] rounded-full`}>
+              <Image
+                src={contactImg}
+                alt={altImg}
+                className="w-full h-full rounded-full"
+                width={200}
+                height={200}
+              />
+            </div> : null
+          }
         </div>
         <div className="flex flex-col justify-center items-center customText" style={companyStyles}>
           <div className="flex items-center justify-center w-full mb-8">
@@ -122,7 +123,7 @@ const Contact = ({
             )}
             <div>
               <h2 className="text-3xl font-semibold border-b-2 ">
-                 {title}
+                {title}
               </h2>
               <p>{jobTittle}</p>
             </div>
@@ -148,47 +149,53 @@ const Contact = ({
                 link={urlWhatsApp}
               />
             </div>
-            <div className="flex items-center my-4">
-              <ButtonAnimation
-                negative={negative}
-                textColor={companyTextColor}
-                backgroundColor={primaryColor}
-                icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
-                label={email}
-                link={emailPersonal}
-                expand
-              />
+            {email ? (
+              <div className="flex items-center my-4">
+                <ButtonAnimation
+                  negative={negative}
+                  textColor={companyTextColor}
+                  backgroundColor={primaryColor}
+                  icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  label={email}
+                  link={emailPersonal}
+                  expand
+                />
+              </div>
+            ) : null}
+            {emailC ? (
+              <div className="flex items-center my-4">
+                <ButtonAnimation
+                  negative={negative}
+                  textColor={companyTextColor}
+                  backgroundColor={secundaryColor}
+                  icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  label={emailC}
+                  link={emailCompany}
+                  expand
+                />
+              </div>
+            ) : null}
+            {webpage ? (
+              <div className="flex items-center my-4">
+                <ButtonAnimation
+                  negative={negative}
+                  textColor={companyTextColor}
+                  backgroundColor={primaryColor}
+                  icon={<LanguageIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
+                  label={webpage}
+                  link={`https://${webpage}/`}
+                  expand
+                />
             </div>
-            <div className="flex items-center my-4">
-              <ButtonAnimation
-                negative={negative}
-                textColor={companyTextColor}
-                backgroundColor={secundaryColor}
-                icon={<EmailIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
-                label={emailC}
-                link={emailCompany}
-                expand
-              />
-            </div>
-            <div className="flex items-center my-4">
-              <ButtonAnimation
-                negative={negative}
-                textColor={companyTextColor}
-                backgroundColor={primaryColor}
-                icon={<LanguageIcon className={`${negative ? 'text-white' : 'text-black'} text-3xl mr-2`} />}
-                label={webpage}
-                link={`https://${webpage}/`}
-                expand
-              />
-            </div>
+            ) : null}
 
             <div className="flex items-center my-4">
-              <SocialButtons icons={icons} />
+              <SocialButtons icons={icons} negative={negative} />
             </div>
             <div className="flex items-center my-4">
               <PoweredButton negative={negative} />
             </div>
-            <div className="flex items-center mb-4">
+            {/* <div className="flex items-center mb-4">
               <GitHubIcon className="ml-4 text-lg" />
               <a
                 href="https://github.com/EiichiM"
@@ -197,15 +204,15 @@ const Contact = ({
               >
                 Git Hub
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </main>
       <button
         onClick={downloadContact}
-        className="fixed border-2 border-white rounded-full w-20 h-20 bottom-8 right-8 flex justify-center items-center z-50"
+        className="fixed border-2 border-white rounded-full w-20 h-20 bottom-8 right-8 flex justify-center items-center z-50 animationDowload"
       >
-        <PersonAddIcon className="text-white text-3xl " />
+        <PersonAddIcon className={`text-white text-3xl animationDowload`} />
       </button>
     </div>
   );

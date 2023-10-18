@@ -3,6 +3,13 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+
+import {
+  COLORS_SOCIAL,
+  ICONS_STYLE
+} from '../utils/contants'
+
+
 export const companyMock = [
     {
       id: "rpm",
@@ -96,5 +103,35 @@ export const companyMock = [
         // ],
       }],
     },
-    // Add more contact data objects as needed
+    {
+      id: "laserinova",
+      companyId: "laserinova",
+      imgLogo: "/laserInova/logo_laser_inova.png",
+      altlogo: "Logo 1",
+      company: "company2",
+      companyBgColor: "#ffffff",
+      companyTextColor: "#000000",
+      primaryColor: "#ff2424",
+      secundaryColor: "#ff2424",
+      negative: false,
+      contacts:[ {
+        id: "raulb",
+        emailC: "informes@laserinova.com",
+        jobTittle: "",
+        lastname: "Basurto",
+        name: "Raul",
+        phone: "5527322661",
+        title: "Raul Basurto",
+        webpage: "www.laserinova.com",
+        
+        icons: [
+          {
+            icon: <InstagramIcon className={ICONS_STYLE}  style={{ color: COLORS_SOCIAL.ig }}/>,
+            link: 'https://instagram.com/laserinova23',
+            id: 'ig',
+          },
+        ],
+      }
+    ],
+    },
   ];

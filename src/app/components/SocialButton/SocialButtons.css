@@ -1,5 +1,5 @@
 /* SocialButton.css */
-ul.social-buttons {
+/* ul.social-buttons {
   position: relative;
   display: flex;
   justify-content: center;
@@ -61,4 +61,41 @@ ul.social-buttons li:hover a::before {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
+} */
+.social-buttons {
+  width: 15rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
+
+.icon-background {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.icon-background::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: 2px solid transparent;
+  transition: transform 0.3s, border 0.3s;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  top: 0;
+  left: 0;
+}
+
+.icon-background:hover::before {
+  transform: scaleY(1);
+  border-color: var(--borderIcon); /* Color del borde al hacer hover */
+  transform-origin: top;
+  top: -2px;
+}
+
