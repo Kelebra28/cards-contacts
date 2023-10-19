@@ -100,7 +100,6 @@ const Contact = ({
     return false;
   }, [negative]);
 
-  console.log(urlCompany, urlContact);
   return (
     <div
       className={`w-full min-h-screen mx-auto  font-sans text-xl pb-10 bg`}
