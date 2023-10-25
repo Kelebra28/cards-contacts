@@ -55,7 +55,7 @@ const Contact = ({
     emailSubject
   )}`;
 
-  const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=Hola!}`;
+  const urlWhatsApp = `https://api.whatsapp.com/send?phone=+52${phone}&text=Hola!`;
   const phoneFormat = formatPhoneNumber(phone);
   // Style Company
   const companyStyles = {
@@ -70,9 +70,9 @@ const Contact = ({
 
     const telefono = `+52 ${phone}`;
     vCard.addPhoneNumber(telefono);
-    vCard.addCompany(company);
-    vCard.addJobtitle(jobTittle);
-    vCard.addEmail(email);
+   company &&  vCard.addCompany(company);
+   jobTittle &&  vCard.addJobtitle(jobTittle);
+    vCard.addEmail(email ? email : emailC);
 
     const vCardData = vCard.toString();
 
