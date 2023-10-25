@@ -106,10 +106,9 @@ export const companyMock = [
         jobTittle: "",
         lastname: "Basurto",
         name: "Raul",
-        phone: "5527322661",
+        phone: "5579398727",
         title: "Raul Basurto",
-        webpage: "www.laserinova.com",
-
+        // webpage: "www.laserinova.com",
         icons: [
           {
             icon: (
