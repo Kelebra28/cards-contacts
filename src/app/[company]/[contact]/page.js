@@ -65,30 +65,30 @@ export default function ContactPage() {
   return (
     <main className="flex items-center justify-center">
       <Contact
-        addressMap={companyData.companyAddress}
-        altlogo={contactData.altlogo}
-        altImg={contactData.altImg}
-        company={contactData.company}
-        contactImg={contactData.contactImg}
-        companySlogan={companyData.companySlogan}
-        companyBgColor={companyData.companyBgColor}
-        companyTextColor={companyData.companyTextColor}
-        email={contactData.email}
-        emailC={contactData.emailC}
-        imgLogo={companyData.imgLogo}
-        icons={contactData.icons}
-        jobTittle={contactData.jobTittle}
-        lastname={contactData.lastname}
-        miniLogo={companyData.miniLogo}
-        name={contactData.name}
-        negative={companyData.negative}
-        phone={contactData.phone}
-        title={contactData.title}
-        primaryColor={companyData.primaryColor}
-        secundaryColor={companyData.secundaryColor}
+        addressMap={companyData?.companyAddress}
+        altlogo={contactData?.altlogo}
+        altImg={contactData?.altImg}
+        company={contactData?.company}
+        contactImg={contactData?.contactImg}
+        companySlogan={companyData?.companySlogan}
+        companyBgColor={companyData?.companyBgColor}
+        companyTextColor={companyData?.companyTextColor}
+        email={contactData?.email}
+        emailC={contactData?.emailC}
+        imgLogo={companyData?.imgLogo}
+        icons={contactData?.icons}
+        jobTittle={contactData?.jobTittle}
+        lastname={contactData?.lastname}
+        miniLogo={companyData?.miniLogo}
+        name={contactData?.name}
+        negative={companyData?.negative}
+        phone={contactData?.phone}
+        title={contactData?.title}
+        primaryColor={companyData?.primaryColor}
+        secundaryColor={companyData?.secundaryColor}
         urlCompany={company}
         urlContact={contact}
-        webpage={contactData.webpage}
+        webpage={contactData?.webpage}
       />
     </main>
   );

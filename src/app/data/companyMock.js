@@ -206,4 +206,40 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "rosestreasure",
+    companyId: "rosestreasure",
+    imgLogo: "/laserInova/logo_laser_inova.png",
+    altlogo: "Logo 1",
+    company: "company2",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#ff2424",
+    secundaryColor: "#ff2424",
+    negative: false,
+    contacts: [
+      {
+        id: "rossyjimenez",
+        emailC: "informes@laserinova.com",
+        jobTittle: "",
+        lastname: "Basurto",
+        name: "Raul",
+        phone: "5579398727",
+        title: "Raul Basurto",
+        // webpage: "www.laserinova.com",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://instagram.com/laserinova23",
+            id: "ig",
+          },
+        ],
+      },
+    ],
+  },
 ];
