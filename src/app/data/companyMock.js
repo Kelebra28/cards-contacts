@@ -209,7 +209,7 @@ export const companyMock = [
   {
     id: "rosestreasure",
     companyId: "rosestreasure",
-    imgLogo: "/laserInova/logo_laser_inova.png",
+    imgLogo: "/roses/logo.png",
     altlogo: "Logo 1",
     company: "company2",
     companyBgColor: "#ffffff",
@@ -220,12 +220,12 @@ export const companyMock = [
     contacts: [
       {
         id: "rossyjimenez",
-        emailC: "informes@laserinova.com",
+        emailC: " rosy.aries7@gmail.com",
         jobTittle: "",
-        lastname: "Basurto",
-        name: "Raul",
-        phone: "5579398727",
-        title: "Raul Basurto",
+        lastname: "Jimenez",
+        name: "Rossy",
+        phone: "74710664097",
+        title: "Rossy Jimenez",
         // webpage: "www.laserinova.com",
         icons: [
           {
@@ -235,9 +235,18 @@ export const companyMock = [
                 style={{ color: COLORS_SOCIAL.ig }}
               />
             ),
-            link: "https://instagram.com/laserinova23",
+            link: "https://www.instagram.com/roses.treasure/?utm_source=ig_web_button_share_sheet&igshid=OGQ5ZDc2ODk2ZA==",
             id: "ig",
           },
+          { icon: (
+            <FacebookIcon
+              className={ICONS_STYLE}
+              style={{ color: COLORS_SOCIAL.fb }}
+            />
+          ),
+          link: "https://www.facebook.com/profile.php?id=100083075393508&mibextid=gik2fB",
+          id: "facebook",
+        }
         ],
       },
     ],
