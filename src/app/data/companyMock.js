@@ -224,7 +224,7 @@ export const companyMock = [
         jobTittle: "",
         lastname: "Jimenez",
         name: "Rossy",
-        phone: "74710664097",
+        phone: "7471066409",
         title: "Rossy Jimenez",
         // webpage: "www.laserinova.com",
         icons: [
