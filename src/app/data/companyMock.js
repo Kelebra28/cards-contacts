@@ -3,6 +3,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import Image from "next/image";
 
 import { COLORS_SOCIAL, ICONS_STYLE } from "../utils/contants";
 
@@ -220,7 +221,7 @@ export const companyMock = [
     contacts: [
       {
         id: "rossyjimenez",
-        emailC: " rosy.aries7@gmail.com",
+        emailC: "rosestreasure22@gmail.com",
         jobTittle: "",
         lastname: "Jimenez",
         name: "Rossy",
@@ -246,7 +247,20 @@ export const companyMock = [
           ),
           link: "https://www.facebook.com/profile.php?id=100083075393508&mibextid=gik2fB",
           id: "facebook",
-        }
+        },
+        { icon: (
+          <Image
+          src="/socialMedia/tiktok-logo.svg"
+          alt="tiktok"
+          width={45}
+          height={45}
+            className={ICONS_STYLE}
+            style={{ color: COLORS_SOCIAL.fb }}
+          />
+        ),
+        link: "https://www.tiktok.com/@rossyjimenez737?_t=8iIKAjG5Abl&_r=1",
+        id: "tiktok",
+      }
         ],
       },
     ],
