@@ -273,8 +273,8 @@ export const companyMock = [
     company: "company2",
     companyBgColor: "#ffffff",
     companyTextColor: "#000000",
-    primaryColor: "#ff2424",
-    secundaryColor: "#ff2424",
+    primaryColor: "#7e8744",
+    secundaryColor: "#35682d",
     negative: false,
     contacts: [
       {
