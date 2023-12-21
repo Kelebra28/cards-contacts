@@ -265,4 +265,49 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "hojacapuchino",
+    companyId: "hojacapuchino",
+    imgLogo: "/hojaCapuchino/logo.jpeg",
+    altlogo: "Logo 1",
+    company: "company2",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#ff2424",
+    secundaryColor: "#ff2424",
+    negative: false,
+    contacts: [
+      {
+        id: "adriana",
+        // emailC: "rosestreasure22@gmail.com",
+        jobTittle: "",
+        lastname: "Flores De Nova",
+        name: "Adriana",
+        phone: "5584274828",
+        title: "Adriana Flores De Nova",
+        // webpage: "www.laserinova.com",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://instagram.com/lahojacapuchino?igshid=OGQ5ZDc2ODk2ZA==",
+            id: "ig",
+          },
+          { icon: (
+            <FacebookIcon
+              className={ICONS_STYLE}
+              style={{ color: COLORS_SOCIAL.fb }}
+            />
+          ),
+          link: "https://www.facebook.com/LaHojaCapuchino?mibextid=ZbWKwL",
+          id: "facebook",
+        },
+        ],
+      },
+    ],
+  },
 ];
