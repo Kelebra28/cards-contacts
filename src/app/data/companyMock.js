@@ -313,7 +313,7 @@ export const companyMock = [
   {
     id: "itzelromero",
     companyId: "itzelromero",
-    imgLogo: "/hojaCapuchino/logo.jpeg",
+    imgLogo: "/itzelRomero/LogoItzel.png",
     altlogo: "Logo 1",
     company: "company2",
     companyBgColor: "#ffffff",
@@ -324,13 +324,12 @@ export const companyMock = [
     contacts: [
       {
         id: "itzel",
-        // emailC: "rosestreasure22@gmail.com",
+        contactImg: "/itzelRomero/itzel.jpg",
         jobTittle: "",
-        lastname: "Flores De Nova",
-        name: "Adriana",
-        phone: "5584274828",
-        title: "Adriana Flores De Nova",
-        // webpage: "www.laserinova.com",
+        lastname: "Romero",
+        name: "Itzel",
+        phone: "5526532113",
+        title: "Itzel Romero",
         icons: [
           {
             icon: (
@@ -339,7 +338,7 @@ export const companyMock = [
                 style={{ color: COLORS_SOCIAL.ig }}
               />
             ),
-            link: "https://instagram.com/lahojacapuchino?igshid=OGQ5ZDc2ODk2ZA==",
+            link: "https://www.instagram.com/holaitzelromero?igsh=OHM2Z2dxbmd3bTJu",
             id: "ig",
           },
           { icon: (
@@ -348,9 +347,22 @@ export const companyMock = [
               style={{ color: COLORS_SOCIAL.fb }}
             />
           ),
-          link: "https://www.facebook.com/LaHojaCapuchino?mibextid=ZbWKwL",
+          link: "https://www.facebook.com/profile.php?id=100093279726098&mibextid=ZbWKwL",
           id: "facebook",
         },
+        { icon: (
+          <Image
+          src="/socialMedia/tiktok-logo.svg"
+          alt="tiktok"
+          width={45}
+          height={45}
+            className={ICONS_STYLE}
+            style={{ color: COLORS_SOCIAL.fb }}
+          />
+        ),
+        link: "https://www.tiktok.com/@holaitzelromero?_t=8iNkS2ldQH7&_r=1",
+        id: "tiktok",
+      }
         ],
       },
     ],
