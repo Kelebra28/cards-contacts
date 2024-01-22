@@ -258,7 +258,7 @@ export const companyMock = [
             style={{ color: COLORS_SOCIAL.fb }}
           />
         ),
-        link: "https://www.tiktok.com/@rossyjimenez737?_t=8iIKAjG5Abl&_r=1",
+        link: "https://www.tiktok.com/@roses.treasure?_t=8iNpTUvM4P7&_r=1",
         id: "tiktok",
       }
         ],
