@@ -384,11 +384,11 @@ export const companyMock = [
     contacts: [
       {
         id: "ana-bolena",
-        // email: "jlduran@dccapitala.mx",
+        email: "ana.ramirez@segurossura.com.mx",
         jobTittle: "Subdirector de competividad y habitat",
         lastname: "Ramírez Sánchez",
         name: "Ana Bolena",
-        phone: "5554129847",
+        phone: "5580609649",
         title: "Ana Bolena Ramírez Sánchez",
         // webpage: "www.dccapitala.mx",
         // contactImg: "/dccapital/JoseLuis-dccapital.jpeg",
