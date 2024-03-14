@@ -367,4 +367,45 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "segurosSura",
+    companyId: "segurosSura",
+    imgLogo: "/sura/sura.jpeg",
+    altlogo: "Seguros Sura",
+    company: "Seguros Sura S.A. de C.V.",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    companyAddress:
+      "Av. Insurgentes Sur #2475, Piso 22 y 23",
+    contacts: [
+      {
+        id: "ana-bolena",
+        email: "ana.ramirez@segurossura.com.mx",
+        jobTittle: "Subdirector de competividad y habitat",
+        lastname: "Ramírez Sánchez",
+        name: "Ana Bolena",
+        phone: "5580609649",
+        title: "Ana Bolena Ramírez Sánchez",
+        // webpage: "www.dccapitala.mx",
+        // contactImg: "/dccapital/JoseLuis-dccapital.jpeg",
+        // altImg: "Jose Luis Duran Angel",
+        icons: [
+          // {
+          //   icon: (
+          //     <LinkedInIcon
+          //       className={ICONS_STYLE}
+          //       style={{ color: COLORS_SOCIAL.ln }}
+          //     />
+          //   ),
+          //   link: "https://www.linkedin.com/in/jose-luis-duran-angel-3456bb66?trk=contact-info",
+          //   id: "ln",
+          // },
+        ],
+      },
+    ],
+  },
 ];
