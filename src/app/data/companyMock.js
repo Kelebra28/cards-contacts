@@ -408,4 +408,88 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "tkAsesora",
+    companyId: "tkAsesora",
+    imgLogo: "/tkAsesora/TK-Asesores.png",
+    altlogo: "Tk Asesora",
+    company: "TK ASESORES INTEGRADOS",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    // companyAddress:
+    //   "Av. Insurgentes Sur #2475, Piso 22 y 23",
+    contacts: [
+      {
+        id: "mayra-cruz",
+        email: "arbol_cruz@yahoo.com.mx",
+        emailC: "tkasesores@outlook.com",
+        jobTittle: "Directora General",
+        lastname: "Cruz",
+        name: "Mayra",
+        phone: "5530509005",
+        title: "Mayra Cruz",
+        webpage: "https://tkasesoresintegrados.com.mx/",
+        contactImg: "/tkAsesora/mayra-cruz.jpeg",
+        altImg: "Mayra Cruz",
+        icons: [
+          // {
+          //   icon: (
+          //     <LinkedInIcon
+          //       className={ICONS_STYLE}
+          //       style={{ color: COLORS_SOCIAL.ln }}
+          //     />
+          //   ),
+          //   link: "https://www.linkedin.com/in/jose-luis-duran-angel-3456bb66?trk=contact-info",
+          //   id: "ln",
+          // },
+        ],
+      },
+    ],
+  },
+  {
+    id: "growthTigger",
+    companyId: "growthTigger",
+    imgLogo: "/growthTigger/LOGO_GT.png",
+    altlogo: "Growth Tigger",
+    company: "GROWTH TRIGGER",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    // companyAddress:
+    //   "Av. Insurgentes Sur #2475, Piso 22 y 23",
+    contacts: [
+      {
+        id: "kevin_armando",
+        email: "kevinarmando@growthtrigger.com.mx",
+        // emailC: "tkasesores@outlook.com",
+        jobTittle: "Representante",
+        lastname: "Flores",
+        name: "Kevin Armando",
+        phone: "5561157141",
+        title: "Kevin Armando Flores",
+        webpage: "https://www.growthtrigger.com.mx/",
+        contactImg: "/growthTigger/kevin.jpeg",
+        altImg: "Kevin Armando Flores",
+        icons: [
+          // {
+          //   icon: (
+          //     <LinkedInIcon
+          //       className={ICONS_STYLE}
+          //       style={{ color: COLORS_SOCIAL.ln }}
+          //     />
+          //   ),
+          //   link: "https://www.linkedin.com/in/jose-luis-duran-angel-3456bb66?trk=contact-info",
+          //   id: "ln",
+          // },
+        ],
+      },
+    ],
+  },
 ];
