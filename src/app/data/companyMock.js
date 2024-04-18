@@ -432,7 +432,7 @@ export const companyMock = [
         name: "Mayra",
         phone: "5530509005",
         title: "Mayra Cruz",
-        webpage: "https://tkasesoresintegrados.com.mx/",
+        webpage: "www.tkasesoresintegrados.com.mx/",
         contactImg: "/tkAsesora/mayra-cruz.jpeg",
         altImg: "Mayra Cruz",
         icons: [
@@ -474,7 +474,7 @@ export const companyMock = [
         name: "Kevin Armando",
         phone: "5561157141",
         title: "Kevin Armando Flores",
-        webpage: "https://www.growthtrigger.com.mx/",
+        webpage: "www.growthtrigger.com.mx/",
         contactImg: "/growthTigger/kevin.jpeg",
         altImg: "Kevin Armando Flores",
         icons: [
