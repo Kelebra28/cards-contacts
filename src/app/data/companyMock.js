@@ -409,6 +409,47 @@ export const companyMock = [
     ],
   },
   {
+    id: "suraM",
+    companyId: "segurosSuraMe",
+    imgLogo: "/sura/sura-m.jpeg",
+    altlogo: "Seguros Sura",
+    company: "Suramericana S.A.",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    // companyAddress:
+    //   "Calle 48",
+    contacts: [
+      {
+        id: "elizabeth-cardona",
+        email: "ecardona@sura.com",
+        jobTittle: "Gerente de Portafolio Sostenible",
+        lastname: "Cardona Rendon",
+        name: "Elizabeth",
+        phone: "5730003238149",
+        title: "Elizabeth Cardona Rendon",
+        // webpage: "www.dccapitala.mx",
+        // contactImg: "/dccapital/JoseLuis-dccapital.jpeg",
+        // altImg: "Jose Luis Duran Angel",
+        icons: [
+          // {
+          //   icon: (
+          //     <LinkedInIcon
+          //       className={ICONS_STYLE}
+          //       style={{ color: COLORS_SOCIAL.ln }}
+          //     />
+          //   ),
+          //   link: "https://www.linkedin.com/in/jose-luis-duran-angel-3456bb66?trk=contact-info",
+          //   id: "ln",
+          // },
+        ],
+      },
+    ],
+  },
+  {
     id: "tkAsesora",
     companyId: "tkAsesora",
     imgLogo: "/tkAsesora/TK-Asesores.png",
