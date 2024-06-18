@@ -533,4 +533,45 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "grupoSlp",
+    companyId: "grupoSlp",
+    imgLogo: "/grupoSlp/grupo_slp_logo.jpg",
+    altlogo: "Grupo SLP",
+    company: "Grupo SLP",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    // companyAddress:
+    //   "Av. Insurgentes Sur #2475, Piso 22 y 23",
+    contacts: [
+      {
+        id: "marcela-rangel",
+        email: "mrangel@gruposlp.com",
+        jobTittle: "Gerencia RRHH",
+        lastname: "Rangel",
+        name: "Mariana",
+        phone: "5579204291",
+        title: "Mariana Rangel",
+        // webpage: "www.dccapitala.mx",
+        // contactImg: "/dccapital/JoseLuis-dccapital.jpeg",
+        // altImg: "Jose Luis Duran Angel",
+        icons: [
+          // {
+          //   icon: (
+          //     <LinkedInIcon
+          //       className={ICONS_STYLE}
+          //       style={{ color: COLORS_SOCIAL.ln }}
+          //     />
+          //   ),
+          //   link: "https://www.linkedin.com/in/jose-luis-duran-angel-3456bb66?trk=contact-info",
+          //   id: "ln",
+          // },
+        ],
+      },
+    ],
+  },
 ];
