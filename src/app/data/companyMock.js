@@ -574,4 +574,126 @@ export const companyMock = [
       },
     ],
   },
+  {
+    id: "codigoAbierto",
+    companyId: "codigoAbierto",
+    imgLogo: "/codigoAbierto/logo-black.webp",
+    altlogo: "Codigó Abierto",
+    company: "Codigó Abierto",
+    companyBgColor: "#ffffff",
+    companyTextColor: "#000000",
+    primaryColor: "#0cb7f2",
+    secundaryColor: "#0979b0",
+    negative: false,
+    // companySlogan:"Te damos utilidades mientras tus ahorros trabajan.",
+    // companyAddress:
+    //   "Av. Insurgentes Sur #2475, Piso 22 y 23",
+    contacts: [
+      {
+        id: "angel-luna",
+        // email: "mrangel@gruposlp.com",
+        jobTittle: "Director Académico",
+        lastname: "Angel",
+        name: "Luna",
+        emailC: "contacto@codigoabierto.tech",
+        phone: "2212149603",
+        title: "Angel Luna",
+        webpage: "www.fundacioncodigoabierto.com",
+        contactImg: "/codigoAbierto/angelo.jpeg",
+        altImg: "Angel Luna",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://www.instagram.com/codigoabierto.tech/",
+            id: "ig",
+          },
+          {
+            icon: (
+              <LinkedInIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ln }}
+              />
+            ),
+            link: "https://www.linkedin.com/in/angelolunamx/",
+            id: "ln",
+          },
+        ],
+      },
+      {
+        id: "anuar",
+        // email: "mrangel@gruposlp.com",
+        jobTittle: "Director",
+        lastname: "Auar",
+        name: "Harb",
+        emailC: "contacto@codigoabierto.tech",
+        phone: "2212149603",
+        title: "Anuar Harb",
+        webpage: "www.fundacioncodigoabierto.com",
+        contactImg: "/codigoAbierto/anuar.jpeg",
+        altImg: "Anuar Harb",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://www.instagram.com/codigoabierto.tech/",
+            id: "ig",
+          },
+          {
+            icon: (
+              <LinkedInIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ln }}
+              />
+            ),
+            link: "https://www.linkedin.com/in/anuarharb/",
+            id: "ln",
+          },
+        ],
+      },
+      {
+        id: "grace",
+        // email: "mrangel@gruposlp.com",
+        jobTittle: "Directora Operativa",
+        lastname: "Grace",
+        name: "Torres",
+        emailC: "contacto@codigoabierto.tech",
+        phone: "2212149603",
+        title: "Grace Torres",
+        webpage: "www.fundacioncodigoabierto.com",
+        contactImg: "/codigoAbierto/grace.jpeg",
+        altImg: "Grace Torres",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://www.instagram.com/codigoabierto.tech/",
+            id: "ig",
+          },
+          {
+            icon: (
+              <LinkedInIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ln }}
+              />
+            ),
+            link: "https://www.linkedin.com/in/grace-torres-8616b0266/",
+            id: "ln",
+          },
+        ],
+      },
+    ],
+  },
 ];
