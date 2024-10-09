@@ -109,7 +109,7 @@ export const companyMock = [
         name: "Raul",
         phone: "5579398727",
         title: "Raul Basurto",
-        // webpage: "www.laserinova.com",
+        webpage: "www.laserinova.com/",
         icons: [
           {
             icon: (
@@ -120,6 +120,48 @@ export const companyMock = [
             ),
             link: "https://instagram.com/laserinova23",
             id: "ig",
+          },
+          {
+            icon: (
+              <FacebookIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.fb }}
+              />
+            ),
+            link: "https://www.facebook.com/profile.php?id=100093617932950",
+            id: "fb",
+          },
+        ],
+      },
+      {
+        id: "ricardob",
+        emailC: "informes@laserinova.com",
+        jobTittle: "",
+        lastname: "Basurto",
+        name: "Ricardo",
+        phone: "5512431147",
+        title: "Raul Basurto",
+        webpage: "www.laserinova.com/",
+        icons: [
+          {
+            icon: (
+              <InstagramIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.ig }}
+              />
+            ),
+            link: "https://instagram.com/laserinova23",
+            id: "ig",
+          },
+          {
+            icon: (
+              <FacebookIcon
+                className={ICONS_STYLE}
+                style={{ color: COLORS_SOCIAL.fb }}
+              />
+            ),
+            link: "https://www.facebook.com/profile.php?id=100093617932950",
+            id: "fb",
           },
         ],
       },
