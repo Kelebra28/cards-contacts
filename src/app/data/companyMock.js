@@ -763,6 +763,42 @@ export const companyMock = [
       // webpage: "www.rpmspeedcode.com",
       // contactImg: "/rpm/ricardo_basurto.jpeg",
       altImg: "Sonia Villegas",
+      icons: [
+        {
+          icon: (
+            <InstagramIcon
+              className={ICONS_STYLE}
+              style={{ color: COLORS_SOCIAL.ig }}
+            />
+          ),
+          link: "https://www.instagram.com/sonnyfunandparty?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+          id: "ig",
+        },
+        {
+          icon: (
+            <Image
+            src="/socialMedia/tiktok-logo.svg"
+            alt="tiktok"
+            width={45}
+            height={45}
+              className={ICONS_STYLE}
+              style={{ color: COLORS_SOCIAL.fb }}
+            />
+          ),
+          link: "https://www.tiktok.com/@sonny.funandparty?_t=ZM-8tEOkD0xuPF&_r=1",
+          id: "tiktok",
+        },
+        {
+          icon: (
+            <FacebookIcon
+            className={ICONS_STYLE}
+            style={{ color: COLORS_SOCIAL.fb }}
+            />
+          ),
+          link: "https://www.facebook.com/share/1BYRbXUZXG/",
+          id: "ig",
+        }
+      ],
     },
   ],
 },
