@@ -795,7 +795,7 @@ export const companyMock = [
             style={{ color: COLORS_SOCIAL.fb }}
             />
           ),
-          link: "https://www.facebook.com/share/1BYRbXUZXG/",
+          link: "https://www.facebook.com/sonnyfunandparty?rdid=uz45azI73JrMzgue&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BYRbXUZXG%2F#",
           id: "ig",
         }
       ],
