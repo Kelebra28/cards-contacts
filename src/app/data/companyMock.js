@@ -109,7 +109,7 @@ export const companyMock = [
         name: "Raul",
         phone: "5579398727",
         title: "Raul Basurto",
-        webpage: "www.laserinova.com/",
+        webpage: "www.laserinova.com",
         icons: [
           {
             icon: (
@@ -118,7 +118,7 @@ export const companyMock = [
                 style={{ color: COLORS_SOCIAL.ig }}
               />
             ),
-            link: "https://instagram.com/laserinova23",
+            link: "https://www.instagram.com/laserinova_corte_laser/",
             id: "ig",
           },
           {
@@ -141,7 +141,7 @@ export const companyMock = [
         name: "Ricardo",
         phone: "5512431147",
         title: "Raul Basurto",
-        webpage: "www.laserinova.com/",
+        webpage: "www.laserinova.com",
         icons: [
           {
             icon: (
